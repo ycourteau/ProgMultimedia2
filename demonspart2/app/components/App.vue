@@ -13,13 +13,15 @@
     </ActionBar>
     <StackLayout>
       <Label class="message" :text="msg" col="0" row="0"/>
-      <Button text="Go to List" @tap="onButtonTap"></Button>
+      <Button text="Go to Pokemon List" @tap="onButtonTapPok"></Button>
+      <Button text="Go to Favorites Pokemons" @tap="onButtonTapFav"></Button>
     </StackLayout>
   </Page>
 </template>
 
 <script >
-import listpage from "./ListPage";
+import listpagepok from "./ListPagePok";
+import listpagefav from "./ListPageFav";
 
 export default {
   data() {
@@ -33,9 +35,13 @@ export default {
     //this.$navigateTo(navigationpage);
     //},
 
-    onButtonTap: function(event) {
+    onButtonTapPok: function(event) {
       console.log("Button tapped");
-      this.$navigateTo(listpage);
+      this.$navigateTo(listpagepok);
+    },
+    onButtonTapFav: function(event) {
+      console.log("Button tapped");
+      this.$navigateTo(listpagefav);
     }
   }
 };

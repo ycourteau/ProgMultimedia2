@@ -22,11 +22,11 @@
   </Page>
 </template>
 <script>
-import detailpage from "./DetailPage";
+import DetailPagePok from "./DetailPagePok";
 import * as http from "http";
 
 export default {
-  props: ["id", "url"],
+  props: ["name", "url"],
 
   mounted() {
     // recevoir la liste des pokemons (objet JSON) a partir d<un url
@@ -52,10 +52,10 @@ export default {
     onItemTap({ index, e }) {
       var myPok = this.pokemon[index];
       //console.log("ListPage " + this.pokemon[index]);
-      //console.log(JSON.stringify(this.pokemon[index].url));
+      //console.log(this.pokemon[index].name);
 
       // navigation a la page details
-      this.$navigateTo(detailpage, {
+      this.$navigateTo(DetailPagePok, {
         props: {
           pok: this.pokemon[index]
         }
