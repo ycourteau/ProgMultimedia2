@@ -15,7 +15,7 @@
       <Label class="message" :text="msg" col="0" row="0"/>
       <Button text="Go to Pokemon List" @tap="onButtonTapPok"></Button>
       <Button text="Go to Favorites Pokemons" @tap="onButtonTapFav"></Button>
-      <Button text="Go to GPS Position" @tap="onButtonTapGPS"></Button>
+      <Button text="Go to Sensors" @tap="onButtonTapGPS"></Button>
     </StackLayout>
   </Page>
 </template>
