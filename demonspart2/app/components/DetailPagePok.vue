@@ -120,7 +120,7 @@ export default {
           url: this.pok.url
         });
 
-        // re-enregistrer la liste dans le local storage et mettre a jour la variable de liste
+        // re-enregistrer la liste dans le local storage et mettre a jour la variable de liste pour l'affichage
         var test = JSON.stringify(pokList);
         localStorage.setItem("favPokList", test);
         this.favPokList = pokList;

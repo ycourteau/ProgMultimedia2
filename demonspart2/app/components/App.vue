@@ -15,6 +15,7 @@
       <Label class="message" :text="msg" col="0" row="0"/>
       <Button text="Go to Pokemon List" @tap="onButtonTapPok"></Button>
       <Button text="Go to Favorites Pokemons" @tap="onButtonTapFav"></Button>
+      <Button text="Go to GPS Position" @tap="onButtonTapGPS"></Button>
     </StackLayout>
   </Page>
 </template>
@@ -22,11 +23,12 @@
 <script >
 import listpagepok from "./ListPagePok";
 import listpagefav from "./ListPageFav";
+import sensorpage from "./SensorPage";
 
 export default {
   data() {
     return {
-      msg: "Hello World!"
+      msg: "My Wonderful Pokemon App"
     };
   },
   methods: {
@@ -36,12 +38,16 @@ export default {
     //},
 
     onButtonTapPok: function(event) {
-      console.log("Button tapped");
+      console.log("Button Pokemon tapped");
       this.$navigateTo(listpagepok);
     },
     onButtonTapFav: function(event) {
-      console.log("Button tapped");
+      console.log("Button Favorite tapped");
       this.$navigateTo(listpagefav);
+    },
+    onButtonTapGPS: function(event) {
+      console.log("Button GPS tapped");
+      this.$navigateTo(sensorpage);
     }
   }
 };
