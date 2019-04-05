@@ -42,6 +42,7 @@ export default {
   mounted() {
     console.log("DetailPagePok mounted");
 
+    //localStorage.clear();
     // aller chercher les informations pour ce pokemon en particulier
     http.getJSON(this.pok.url.toString()).then(
       result => {
@@ -111,9 +112,11 @@ export default {
         var pokList = [];
 
         // s'il y a deja des elements dans la liste des favoris copier la liste
-        if (typeof this.favPokList !== undefined) {
-          var pokList = this.favPokList;
+        if (this.favPokList) {
+          pokList = this.favPokList;
         }
+        console.log("pokList = " + pokList);
+        console.log("name = " + this.pok.name + " url = " + this.pok.url);
         // ajouter l'element
         pokList.push({
           name: this.pok.name,

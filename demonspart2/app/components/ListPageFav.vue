@@ -85,13 +85,14 @@ export default {
         this.favPokList = storedList;
 
         // debug : faire afficher la liste des pokemons favoris
-        /*  if (this.favPokList.length != null) {
-      for (var i = 0; i < this.favPokList.length; i++) {
-        console.log(
-          " onNavigatedTo : GET ITEM = " + JSON.stringify(this.favPokList[i])
-        );
-      }
-    } */
+        if (this.favPokList.length != null) {
+          for (var i = 0; i < this.favPokList.length; i++) {
+            console.log(
+              " onNavigatedTo : GET ITEM = " +
+                JSON.stringify(this.favPokList[i])
+            );
+          }
+        }
       }
     },
     onItemTap({ index, e }) {
